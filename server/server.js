@@ -13,9 +13,14 @@ app.use(cors());
 const users = [];
 
 app.use(bodyParser.json());
+app.use(express.static(process.cwd()+"/docs/"));
 
 app.get('/api/users', (req, res) => {
   res.json(users);
+});
+
+app.get('/', (req,res) => {
+  res.sendFile(process.cwd()+"/docs/index.html")
 });
 
 app.post('/api/user', (req, res) => {

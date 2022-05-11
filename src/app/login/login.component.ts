@@ -74,4 +74,8 @@ export class LoginComponent implements OnInit {
     onSignup() {
         this.router.navigate(['/registration']);
     }
+
+    clickReadme(){
+        this.router.navigate(['/readme']);
+    }
 }
