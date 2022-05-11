@@ -79,9 +79,9 @@ app.get('/api/get-grade', (req, res) => {
     mysql.createConnection({
       host: 'remotemysql.com',
       port: 3306,
-      user: 'svQtxIxilZ',
-      database: 'svQtxIxilZ',
-      password: 'Z5uzX9DkGm',
+      user: 'TKSmeb3SF5',
+      database: 'TKSmeb3SF5',
+      password: 'NIAq1JFhQq',
     })
       .then(conn => {
         let result = conn.query('select * from grade');
@@ -104,9 +104,9 @@ app.get('/api/get-role', (req, res) => {
     mysql.createConnection({
       host: 'remotemysql.com',
       port: 3306,
-      user: 'svQtxIxilZ',
-      database: 'svQtxIxilZ',
-      password: 'Z5uzX9DkGm',
+      user: 'TKSmeb3SF5',
+      database: 'TKSmeb3SF5',
+      password: 'NIAq1JFhQq',
     })
       .then(conn => {
         let result = conn.query('select * from role');
@@ -129,9 +129,9 @@ app.get('/api/get-subject', (req, res) => {
     mysql.createConnection({
       host: 'remotemysql.com',
       port: 3306,
-      user: 'svQtxIxilZ',
-      database: 'svQtxIxilZ',
-      password: 'Z5uzX9DkGm',
+      user: 'TKSmeb3SF5',
+      database: 'TKSmeb3SF5',
+      password: 'NIAq1JFhQq',
     })
       .then(conn => {
         let result = conn.query('select * from subject');
@@ -155,9 +155,9 @@ app.get('/api/get-tutor', (req, res) => {
     mysql.createConnection({
       host: 'remotemysql.com',
       port: 3306,
-      user: 'svQtxIxilZ',
-      database: 'svQtxIxilZ',
-      password: 'Z5uzX9DkGm',
+      user: 'TKSmeb3SF5',
+      database: 'TKSmeb3SF5',
+      password: 'NIAq1JFhQq',
     })
       .then(conn => {
         let result = conn.query(`select u.user_id, u.phone, u.first_name, u.last_name, ugs.grade,ugs.subject_name
@@ -184,9 +184,9 @@ app.post("/api/insert-user-grade-subjects", (req, res) => {
     mysql.createConnection({
       host: 'remotemysql.com',
       port: 3306,
-      user: 'svQtxIxilZ',
-      database: 'svQtxIxilZ',
-      password: 'Z5uzX9DkGm',
+      user: 'TKSmeb3SF5',
+      database: 'TKSmeb3SF5',
+      password: 'NIAq1JFhQq',
     })
       .then(conn => {
         conn.query(`insert into user_grade_subjects (user_id, grade,subject_name,enroll_date) VALUES (?,?,?,?)`,
@@ -213,9 +213,9 @@ app.post("/api/insert-user-detail", (req, res) => {
     mysql.createConnection({
       host: 'remotemysql.com',
       port: 3306,
-      user: 'svQtxIxilZ',
-      database: 'svQtxIxilZ',
-      password: 'Z5uzX9DkGm',
+      user: 'TKSmeb3SF5',
+      database: 'TKSmeb3SF5',
+      password: 'NIAq1JFhQq',
     })
       .then(conn => {
         conn.query(`insert into user (phone, password, first_name, last_name, email, address_line1, address_line2, city, state, zipcode, role_id)
@@ -237,9 +237,9 @@ app.post("/api/insert-user-detail", (req, res) => {
     mysql.createConnection({
       host: 'remotemysql.com',
       port: 3306,
-      user: 'svQtxIxilZ',
-      database: 'svQtxIxilZ',
-      password: 'Z5uzX9DkGm',
+      user: 'TKSmeb3SF5',
+      database: 'TKSmeb3SF5',
+      password: 'NIAq1JFhQq',
     })
       .then(conn => {
         let result = conn.query(`select user_id from user where phone = ${req.body.phoneNumber}`);
@@ -267,9 +267,9 @@ app.post("/api/insert-user-detail", (req, res) => {
       return mysql.createConnection({
         host: 'remotemysql.com',
         port: 3306,
-        user: 'svQtxIxilZ',
-        database: 'svQtxIxilZ',
-        password: 'Z5uzX9DkGm',
+        user: 'TKSmeb3SF5',
+      database: 'TKSmeb3SF5',
+      password: 'NIAq1JFhQq',
       })
         .then(conn => {
           conn.query(`insert into user_grade_subject (user_id, grade,subject_name,enroll_date) VALUES (?,?,?,?)`,
@@ -297,9 +297,9 @@ app.get('/api/get-schedules', (req, res) => {
     mysql.createConnection({
       host: 'remotemysql.com',
       port: 3306,
-      user: 'svQtxIxilZ',
-      database: 'svQtxIxilZ',
-      password: 'Z5uzX9DkGm',
+      user: 'TKSmeb3SF5',
+      database: 'TKSmeb3SF5',
+      password: 'NIAq1JFhQq',
     })
       .then(conn => {
         let result = conn.query(`select start_date,end_date,fee from tution_schedule where
@@ -326,9 +326,9 @@ app.post("/api/insert-schedule-enroll", (req, res) => {
     mysql.createConnection({
       host: 'remotemysql.com',
       port: 3306,
-      user: 'svQtxIxilZ',
-      database: 'svQtxIxilZ',
-      password: 'Z5uzX9DkGm',
+      user: 'TKSmeb3SF5',
+      database: 'TKSmeb3SF5',
+      password: 'NIAq1JFhQq',
     })
       .then(conn => {
         conn.query(`insert into tution_schedule_enrollment (schedule_id, student_user_id, enroll_date) VALUES (?,?,?)`,
