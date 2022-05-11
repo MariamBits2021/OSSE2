@@ -47,8 +47,8 @@ export class RegistrationComponent implements OnInit {
 
 
   roleList: any = [{ id: 1, name: 'student' }, { id: 2, name: 'facilitator' }];
-  gradeList: any = [{ id: 1, name: 'grade1' }, { id: 2, name: 'grade2' }, { id: 3, name: 'grade3' }];
-  subjectList: any = [{ id: 1, name: 'matchs' }, { id: 2, name: 'science' }];
+  gradeList: any = [{ id: 1, description: 'grade1' }, { id: 2, description: 'grade2' }, { id: 3, description: 'grade3' }];
+  subjectList: any = [{ id: 1, description: 'matchs' }, { id: 2, description: 'science' }];
 
   registrationForm = this.fb.group({
 
@@ -174,29 +174,29 @@ export class RegistrationComponent implements OnInit {
 
   populateDropdown() {
 
-    this.registrationService.getGrades()
-      .pipe(first())
-      .subscribe(
-        data => {
-          this.gradeList = data;
-          console.log("get grades", data);
+    // this.registrationService.getGrades()
+    //   .pipe(first())
+    //   .subscribe(
+    //     data => {
+    //       this.gradeList = data;
+    //       console.log("get grades", data);
 
-        },
-        error => {
-          this.error = error;
-        });
+    //     },
+    //     error => {
+    //       this.error = error;
+    //     });
 
-    this.registrationService.getAllSubjects()
-      .pipe(first())
-      .subscribe(
-        data => {
-          this.subjectList = data;
-          console.log("get sub", data);
+    // this.registrationService.getAllSubjects()
+    //   .pipe(first())
+    //   .subscribe(
+    //     data => {
+    //       this.subjectList = data;
+    //       console.log("get sub", data);
 
-        },
-        error => {
-          this.error = error;
-        });
+    //     },
+    //     error => {
+    //       this.error = error;
+    //     });
 
 
 
